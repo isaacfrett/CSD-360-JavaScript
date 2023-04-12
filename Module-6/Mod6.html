@@ -1,0 +1,32 @@
+<!-- Isaac Frett 4/10/2023 Module 6 Assignment -->
+<!-- The purpose of this code is display the fibonacci sequence -->
+
+<!DOCTYPE html>
+
+<html lang='EN'>
+    <head>
+        
+    </head>
+
+    <body>
+        <h1>Fibonacci Sequence</h1>
+        <script type = "text/javascript">
+            let first = 1;
+            let second = 1;
+            document.write("1 - " + first + "<br>");
+            document.write("2 - " + second + "<br>");
+            function fibonacci(){
+                for (counter = 3; counter <= 30; counter++) {
+                    let total = first + second;
+                    document.write(counter + " - " + total + "<br>")
+                    first = second;
+                    second = total;
+                }
+            }
+            fibonacci()
+        </script>
+    </body>
+    <footer>
+        <a href="../index.html">back</a>
+    </footer>
+<html>
