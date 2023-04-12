@@ -8,27 +8,37 @@
         
     </head>
 
-    <body>
-        <h1>10 Favorite Sports Teams</h1>
+    <body style="font-size: 24px;">
+        <h1></h1>
         <script type = "text/javascript">
-            
-            const myArray = ["Chicago Bulls", "Los Angeles Chargers", "Chicago Cubs", "Chicago Blackhawks", "Charlotte Hornets", "Manchester United", "Real Madrid", "Charlotte FC", "Iowa Hawkeyes", "Los Angeles Lakers"]
-
-            function display(){
-                let number = 1;
-                for(var i = 0; i < myArray.length; i++){
-                    document.write(number + ". " + myArray[i] + "<br>")
-                    number++
+            function table() {
+                for (i = 4; i <= 14; i++) {
+                    backcolor = "#f2f2f2"
+                    if (i%2 == 0) {
+                        backcolor = "white"
+                    }
+                    document.write("<tr style='height: 30px; background-color: " + backcolor + ";'>")
+                    document.write("<td style='border: 1px solid black'>" + i + "</td>")
+                    document.write("<td style='border: 1px solid black'>" + Math.sqrt(i).toPrecision(3) + "</td>")
+                    document.write("<td style='border: 1px solid black'>" + Math.pow(i, 2) + "</td>")
+                    document.write("<td style='border: 1px solid black'>" + Math.pow(i, 3) + "</td>")
+                    document.write("</tr>")
                 }
-                number = 1;
-                document.write("<br>");
-                for(var i = myArray.length - 1; i >= 0; i--){ 
-                    document.write(number + ". " + myArray[i] + "<br>")
-                    number++
-                }
-            }
-            display()
+            }        
         </script>
+        <table style="border: 1px solid black; border-collapse: collapse; width: 600px;">
+            <thead style="border: 1px solid black; height: 30px; background-color: #f2f2f2;">
+                <tr>
+                    <td style="border: 1px solid black">Intitial Value</td>
+                    <td style="border: 1px solid black">Square Root</td>
+                    <td style="border: 1px solid black">Power of 2</td>
+                    <td style="border: 1px solid black">Power of 3</td>  
+                </tr>
+            </thead>
+            <tbody style="border: 1px solid black">
+                <Script>table()</Script>
+            </tbody>
+        </table>
     </body>
     <footer>
         <a href="../index.html">back</a>
