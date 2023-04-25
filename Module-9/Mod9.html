@@ -1,0 +1,48 @@
+<!-- Isaac Frett 4/25/2023 Module 9 Assignment -->
+<!-- The purpose of this code is to take an array and count the number of number elements in it -->
+
+
+<!DOCTYPE html>
+
+<html lang='EN'>
+    <head>    
+    </head>
+    <body style="font-size: 24px;">
+        <script type = "text/javascript">
+    
+            function counter(arrayIn) {
+                let arrayOut = [];
+                let negatives = 0;
+                let zeros = 0;
+                let positives = 0;
+                for (i = 0; i < arrayIn.length; i++) {
+                    let element = arrayIn[i];
+                    if (element < 0) {
+                        negatives += 1;
+                    }
+                    if (element == 0) {
+                        zeros += 1;
+                    }  
+                    if (element > 0) {
+                        positives += 1;
+                    }  
+                }
+                arrayOut.push(negatives, zeros, positives);
+                return arrayOut     
+            }            
+        </script>
+        <p>
+            <script>
+                let array = [43, 32, 2123, 0, 0, -54, -43];
+                document.write("Input array: " + array.join(', ') + "<br/>");
+                let arraycount = counter(array)
+                document.write("Negatives: " + arraycount[0] + "<br/>");
+                document.write("Zeros: " + arraycount[1] + "<br/>");
+                document.write("Positives: " + arraycount[2] + "<br/>");
+            </script>
+        </p>
+    </body>
+    <footer>
+        <a href="../index.html">back</a>
+    </footer>
+<html>
