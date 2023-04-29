@@ -1,0 +1,73 @@
+<!-- Isaac Frett 4/29/2023 Module 10 Programming Assignment -->
+<!-- The purpose of this code is to display a site that changes based on user interaction -->
+
+<!DOCTYPE html>
+
+<html lang="EN">
+    <head>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function nextImage(n) {
+                showSlides(slideIndex += n);
+            }
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slides");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex-1].style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Superheroes</h1>
+        <div class="slides" style="display: block; text-align: center;">
+            <img src="Batman.jpg" style="width: 50%; text-align: center;">
+        </div>
+        <div class="slides" style="display: none; text-align: center;">
+            <img src="Ironman.jpg" style="width: 50%;">
+        </div>
+        <div class="slides" style="display: none; text-align: center;">
+            <img src="Spiderman.jpg" style="width: 50%;">
+        </div>
+        <div class="slides" style="display: none; text-align: center;">
+            <img src="Thor.jpg" style="width: 50%;">
+        </div> 
+        <div class="slides" style="display: none; text-align: center;">
+            <img src="Hulk.jpg" style="width: 50%;">
+        </div>
+        <div style="min-width: 150px; position: absolute; top: 60vw; width: 20%; text-align: center; left: 40%;">
+            <button
+                style="background-color:blue; color:white; border:20%; font-size: 20px; border-color: blue; border-style:solid; border-radius: 70px; padding: 0.5em 1em;"
+                onmouseover="this.style.color='blue'; this.style.background='white'; this.style.border.color='blue'; this.style.cursor='pointer';" 
+                onmouseout="this.style.color='white'; this.style.background='blue'; this.style.border.color='blue';"
+                onmousedown="this.style.background='lightgray';"
+                onmouseup="this.style.background='white';"
+                onclick="nextImage(1)"
+            >
+                Next Image
+            </button>
+        </div>
+    </body>
+    <footer>
+        <button 
+            style="min-width: 100px; position: absolute; top: 70vw; width: 10%; text-align: center; left: 45%; background-color:blue; color:white; border:20%; font-size: 20px; border-color: blue; border-style:solid; border-radius: 70px; padding: 0.5em 1em;"
+            onmouseover="this.style.color='blue'; this.style.background='white'; this.style.border.color='blue'; this.style.cursor='pointer';" 
+            onmouseout="this.style.color='white'; this.style.background='blue'; this.style.border.color='blue';"
+            onmousedown="this.style.background='lightgray';"
+            onmouseup="this.style.background='white';"
+            onclick="window.location.href='../index.html'";
+        >
+            Back
+        </button>
+    </footer>
+</html>
