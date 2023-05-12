@@ -1,0 +1,144 @@
+<!-- Isaac Frett 5/11/2023 Module 12 Programming Assignment -->
+<!-- The purpose of this code is to modify the DOM when an image is clicked on -->
+
+<!DOCTYPE html>
+
+<html lang="EN">
+    <head>
+        <script type="text/javascript">
+            function newMain(image, background) {
+                document.getElementById('body').style.backgroundColor = background
+                var mainImage = document.getElementById('mainImage');
+                var newImage = document.createElement('img');
+                newImage.id = "mainImage";
+                newImage.src = image;
+                newImage.style.width = "width: 30vw;";
+                newImage.style.minWidth = "min-width: 200px;";
+                newImage.style.maxWidth = "max-width: 350px;";
+                mainImage.parentNode.replaceChild(newImage, mainImage)
+
+            }
+        </script>
+    </head>
+    <body id="body" style="background-color: #0080C5;">
+        <table CELLSPACING="0" CELLPADDING="0" style="margin-left: auto; margin-right: auto; text-indent: 0;">
+            <tbody>
+                <tr>
+                    <td colspan="8" style="text-align: center;">
+                        <img id="mainImage" style="width: 30vw; min-width: 200px; max-width: 350px;" src="Logos/nfl-los-angeles-chargers-team-logo.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#003593')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/los-angeles-rams-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#97233F')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-arizona-cardinals-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#A71930')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-atlanta-falcons-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#241773')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-baltimore-ravens-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#C60C3D')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-buffalo-bills-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#0085CA')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-carolina-panthers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#C83803')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-chicago-bears-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#FB4F14')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-cincinnati-bengals-team-logo.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#FF3C00')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-cleveland-browns-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#002244')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-dallas-cowboys-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#FB4F14')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-denver-broncos-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#0076B6')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-detroit-lions-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#203731')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-green-bay-packers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#A71930')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-houston-texans-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#002C5F')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-indianapolis-colts-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#006778')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-jacksonville-jaguars-team-logo.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#E31837')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-kansas-city-chiefs-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#0080C5')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-los-angeles-chargers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#008E97')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-miami-dolphins-logo018.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#4F2683')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-minnesota-vikings-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#002244')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-new-england-patriots-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#D3BC8D')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-new-orleans-saints-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#0B2265')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-new-york-giants-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#203731')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-new-york-jets-team-logo.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#A5ACAF')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-oakland-raiders-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#004C54')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-philadelphia-eagles-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#EEAD1E')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-pittsburgh-steelers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#AA0000')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-san-francisco-49ers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#002244')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-seattle-seahawks-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#D50A0A')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-tampa-bay-buccaneers-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#4B92DB')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/nfl-tennessee-titans-team-logo.png">
+                    </td>
+                    <td>
+                        <img class="image" onclick="newMain(this.src, '#640A10')" style="width: 10vw; min-width: 60px; max-width: 125px;" src="Logos/washington-football-team-logo.png">
+                    </td>
+                </tr>
+         
+            </tbody>
+        </table>
+    </body>
+    <footer style="text-align: right; margin-top: 20px;">
+        <button onclick="window.location.href='../index.html'";>
+            Back
+        </button>
+    </footer>
+</html>
